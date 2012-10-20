@@ -19,6 +19,8 @@
 		4D9C1B1D163341DC0085151C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9C1B1C163341DC0085151C /* ViewController.m */; };
 		4D9C1B20163341DC0085151C /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D9C1B1E163341DC0085151C /* ViewController_iPhone.xib */; };
 		4D9C1B23163341DC0085151C /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D9C1B21163341DC0085151C /* ViewController_iPad.xib */; };
+		4D9C1B2E163342500085151C /* MGInstagram.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9C1B2D163342500085151C /* MGInstagram.m */; };
+		4D9C1B301633437F0085151C /* MGInstagramPhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D9C1B2F1633437F0085151C /* MGInstagramPhoto.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,9 @@
 		4D9C1B1C163341DC0085151C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4D9C1B1F163341DC0085151C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		4D9C1B22163341DC0085151C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		4D9C1B2C163342500085151C /* MGInstagram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGInstagram.h; sourceTree = "<group>"; };
+		4D9C1B2D163342500085151C /* MGInstagram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGInstagram.m; sourceTree = "<group>"; };
+		4D9C1B2F1633437F0085151C /* MGInstagramPhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MGInstagramPhoto.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,13 +90,14 @@
 		4D9C1B09163341DB0085151C /* MGInstagramDemo */ = {
 			isa = PBXGroup;
 			children = (
-				4D9C1B29163341F90085151C /* MGInstagram */,
+				4D9C1B2B163342340085151C /* MGInstagram */,
 				4D9C1B12163341DC0085151C /* AppDelegate.h */,
 				4D9C1B13163341DC0085151C /* AppDelegate.m */,
 				4D9C1B1B163341DC0085151C /* ViewController.h */,
 				4D9C1B1C163341DC0085151C /* ViewController.m */,
 				4D9C1B1E163341DC0085151C /* ViewController_iPhone.xib */,
 				4D9C1B21163341DC0085151C /* ViewController_iPad.xib */,
+				4D9C1B2F1633437F0085151C /* MGInstagramPhoto.png */,
 				4D9C1B0A163341DB0085151C /* Supporting Files */,
 			);
 			path = MGInstagramDemo;
@@ -111,9 +117,11 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		4D9C1B29163341F90085151C /* MGInstagram */ = {
+		4D9C1B2B163342340085151C /* MGInstagram */ = {
 			isa = PBXGroup;
 			children = (
+				4D9C1B2C163342500085151C /* MGInstagram.h */,
+				4D9C1B2D163342500085151C /* MGInstagram.m */,
 			);
 			name = MGInstagram;
 			path = ../../MGInstagram;
@@ -176,6 +184,7 @@
 				4D9C1B1A163341DC0085151C /* Default-568h@2x.png in Resources */,
 				4D9C1B20163341DC0085151C /* ViewController_iPhone.xib in Resources */,
 				4D9C1B23163341DC0085151C /* ViewController_iPad.xib in Resources */,
+				4D9C1B301633437F0085151C /* MGInstagramPhoto.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +198,7 @@
 				4D9C1B10163341DB0085151C /* main.m in Sources */,
 				4D9C1B14163341DC0085151C /* AppDelegate.m in Sources */,
 				4D9C1B1D163341DC0085151C /* ViewController.m in Sources */,
+				4D9C1B2E163342500085151C /* MGInstagram.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

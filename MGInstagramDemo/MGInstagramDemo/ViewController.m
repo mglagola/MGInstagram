@@ -7,9 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "MGInstagram.h"
 
 @interface ViewController ()
-
+- (IBAction)postToInstagramPressed:(id)sender;
 @end
 
 @implementation ViewController
@@ -20,10 +21,14 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning
+- (IBAction)postToInstagramPressed:(id)sender
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    if ([[MGInstagram sharedInstance] isAppInstalled])
+        [[MGInstagram sharedInstance] postImage:imageView.image inView:self.view];
+    else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Instagram Not Installed!" message:@"Instagram must be installed on the device in order to post images" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil];
+        [alert show];
+    }
 }
 
 @end
