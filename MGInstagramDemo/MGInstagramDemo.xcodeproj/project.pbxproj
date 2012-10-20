@@ -21,6 +21,8 @@
 		4D9C1B23163341DC0085151C /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D9C1B21163341DC0085151C /* ViewController_iPad.xib */; };
 		4D9C1B2E163342500085151C /* MGInstagram.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9C1B2D163342500085151C /* MGInstagram.m */; };
 		4D9C1B301633437F0085151C /* MGInstagramPhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D9C1B2F1633437F0085151C /* MGInstagramPhoto.png */; };
+		4D9C1B3B16335B900085151C /* MGInstagramPhotoLarge.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D9C1B3916335B900085151C /* MGInstagramPhotoLarge.png */; };
+		4D9C1B3C16335B900085151C /* MGInstagramPhotoSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D9C1B3A16335B900085151C /* MGInstagramPhotoSmall.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		4D9C1B2C163342500085151C /* MGInstagram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGInstagram.h; sourceTree = "<group>"; };
 		4D9C1B2D163342500085151C /* MGInstagram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGInstagram.m; sourceTree = "<group>"; };
 		4D9C1B2F1633437F0085151C /* MGInstagramPhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MGInstagramPhoto.png; sourceTree = "<group>"; };
+		4D9C1B3916335B900085151C /* MGInstagramPhotoLarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MGInstagramPhotoLarge.png; sourceTree = "<group>"; };
+		4D9C1B3A16335B900085151C /* MGInstagramPhotoSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MGInstagramPhotoSmall.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 				4D9C1B1E163341DC0085151C /* ViewController_iPhone.xib */,
 				4D9C1B21163341DC0085151C /* ViewController_iPad.xib */,
 				4D9C1B2F1633437F0085151C /* MGInstagramPhoto.png */,
+				4D9C1B3916335B900085151C /* MGInstagramPhotoLarge.png */,
+				4D9C1B3A16335B900085151C /* MGInstagramPhotoSmall.png */,
 				4D9C1B0A163341DB0085151C /* Supporting Files */,
 			);
 			path = MGInstagramDemo;
@@ -185,6 +191,8 @@
 				4D9C1B20163341DC0085151C /* ViewController_iPhone.xib in Resources */,
 				4D9C1B23163341DC0085151C /* ViewController_iPad.xib in Resources */,
 				4D9C1B301633437F0085151C /* MGInstagramPhoto.png in Resources */,
+				4D9C1B3B16335B900085151C /* MGInstagramPhotoLarge.png in Resources */,
+				4D9C1B3C16335B900085151C /* MGInstagramPhotoSmall.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

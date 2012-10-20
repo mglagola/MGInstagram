@@ -15,8 +15,15 @@ extern NSString* const kInstagramPhotoFileName;
 
 + (MGInstagram *)sharedInstance;
 
+//checks to see if user has instagram installed on device
 - (BOOL) isAppInstalled;
 
+//checks to see if image is large enough to be posted by instagram
+//returns NO if image dimensions are under 612x612
+- (BOOL) isImageCorrectSize:(UIImage*)image;
+
+//post image to instagram by passing in the target image and
+//the view in which the user will be presented with the instagram model
 - (void) postImage:(UIImage*)image inView:(UIView*)view;
 
 @end
