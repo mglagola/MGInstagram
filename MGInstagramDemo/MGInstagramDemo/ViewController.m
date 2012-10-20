@@ -27,8 +27,8 @@
 
 - (void) postInstagramImage:(UIImage*) image
 {
-    if ([[MGInstagram sharedInstance] isAppInstalled])
-        [[MGInstagram sharedInstance] postImage:image inView:self.view];
+    if ([MGInstagram isAppInstalled])
+        [MGInstagram postImage:image inView:self.view];
     else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Instagram Not Installed!" message:@"Instagram must be installed on the device in order to post images" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil];
         [alert show];
@@ -56,7 +56,7 @@
 - (IBAction)correctlyPost302InstagramPressed:(id)sender
 {
     UIImage *image = [UIImage imageNamed:@"MGInstagramPhotoSmall"];
-    if ([[MGInstagram sharedInstance] isImageCorrectSize:image]) //GOOD PRACTICE
+    if ([MGInstagram isImageCorrectSize:image]) //GOOD PRACTICE
         [self postInstagramImage:image];
     else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Image TOO SMALL" message:@"Images must be 612x612 or larger to be posted on instagram" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil];

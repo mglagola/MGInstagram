@@ -12,6 +12,9 @@
 {
     UIDocumentInteractionController *documentInteractionController;
 }
+
++ (MGInstagram *)sharedInstance;
+
 @end
 
 @implementation MGInstagram
@@ -29,13 +32,13 @@ NSString* const kInstagramPhotoFileName = @"tempinstgramphoto.igo";
     return sharedInstance;
 }
 
-- (BOOL) isAppInstalled
++ (BOOL) isAppInstalled
 {
     NSURL *appURL = [NSURL URLWithString:@"instagram://app"];
     return [[UIApplication sharedApplication] canOpenURL:appURL];
 }
 
-- (BOOL) isImageCorrectSize:(UIImage*)image
++ (BOOL) isImageCorrectSize:(UIImage*)image
 {
     return (image.size.width >= 612 && image.size.height >= 612);
 }
@@ -45,11 +48,16 @@ NSString* const kInstagramPhotoFileName = @"tempinstgramphoto.igo";
     return [NSString stringWithFormat:@"%@/%@",[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"],kInstagramPhotoFileName];
 }
 
++ (void) postImage:(UIImage*)image inView:(UIView*)view
+{
+    [[MGInstagram sharedInstance] postImage:image inView:view];
+}
+
 - (void) postImage:(UIImage*)image inView:(UIView*)view
 {
     if (!image)
         [NSException raise:NSInternalInconsistencyException format:@"Image cannot be nil!"];
-    if (![self isImageCorrectSize:image])
+    if (![MGInstagram isImageCorrectSize:image])
         [NSException raise:NSInternalInconsistencyException format:@"INSTAGRAM IMAGE IS TOO SMALL! Instagram only takes images with dimensions 612x612 and larger. Use isImageCorrectSize: to make sure image is the correct size"];
     
     [UIImageJPEGRepresentation(image, 1.0) writeToFile:[self photoFilePath] atomically:YES];
