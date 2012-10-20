@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>MGInstagram.xcscheme</key>
+		<key>MGInstagramDemo.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4D9C1AC9163340420085151C</key>
+		<key>4D9C1AFE163341DB0085151C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

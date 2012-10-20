@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4D9C1AC9163340420085151C"
-               BuildableName = "MGInstagram.app"
-               BlueprintName = "MGInstagram"
-               ReferencedContainer = "container:MGInstagram.xcodeproj">
+               BlueprintIdentifier = "4D9C1AFE163341DB0085151C"
+               BuildableName = "MGInstagramDemo.app"
+               BlueprintName = "MGInstagramDemo"
+               ReferencedContainer = "container:MGInstagramDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4D9C1AC9163340420085151C"
-            BuildableName = "MGInstagram.app"
-            BlueprintName = "MGInstagram"
-            ReferencedContainer = "container:MGInstagram.xcodeproj">
+            BlueprintIdentifier = "4D9C1AFE163341DB0085151C"
+            BuildableName = "MGInstagramDemo.app"
+            BlueprintName = "MGInstagramDemo"
+            ReferencedContainer = "container:MGInstagramDemo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -51,10 +51,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4D9C1AC9163340420085151C"
-            BuildableName = "MGInstagram.app"
-            BlueprintName = "MGInstagram"
-            ReferencedContainer = "container:MGInstagram.xcodeproj">
+            BlueprintIdentifier = "4D9C1AFE163341DB0085151C"
+            BuildableName = "MGInstagramDemo.app"
+            BlueprintName = "MGInstagramDemo"
+            ReferencedContainer = "container:MGInstagramDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -69,10 +69,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4D9C1AC9163340420085151C"
-            BuildableName = "MGInstagram.app"
-            BlueprintName = "MGInstagram"
-            ReferencedContainer = "container:MGInstagram.xcodeproj">
+            BlueprintIdentifier = "4D9C1AFE163341DB0085151C"
+            BuildableName = "MGInstagramDemo.app"
+            BlueprintName = "MGInstagramDemo"
+            ReferencedContainer = "container:MGInstagramDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
