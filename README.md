@@ -25,10 +25,13 @@ MGInstagram is a iOS Utility for posting Images to Instagram from your app.
 ### Example Usage
 
 ```objc  
-    UIImage *image = [UIImage imageNamed:@"MyImageName.png"];
-    if ([MGInstagram isAppInstalled] && [MGInstagram isImageCorrectSize:image])
-        [MGInstagram postImage:image inView:self.view];
-    else {
-        NSLog(@"Error Instagram is either not installed or image is incorrect size");
-    }
+UIImage *image = [UIImage imageNamed:@"MyImageName.png"];
+if ([MGInstagram isAppInstalled] && [MGInstagram isImageCorrectSize:image]) 
+{
+    [MGInstagram postImage:image inView:self.view];
+}
+else 
+{
+   	NSLog(@"Error Instagram is either not installed or image is incorrect size");
+}
 ```
