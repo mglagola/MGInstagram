@@ -333,6 +333,7 @@
 				4D9C1B28163341DC0085151C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
