@@ -2,7 +2,7 @@
 MGInstagram is a iOS Utility for posting Images to Instagram from your app.
 
 #### The Process
-- An "openInMenu" is displayed when attempting to post a picture. (Required by Instagram)
+- An "openInMenu" is displayed when attempting to post a picture. (Currently the only way to post to instagram)
 - The user will have a choice to cancel or to select Instagram
 - If the user selects Instagram, the user will be taken to the Instagram app with their Image.
 
