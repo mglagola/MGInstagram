@@ -22,6 +22,9 @@ MGInstagram is a iOS Utility for posting Images to Instagram from your app.
 //User is only given Instagram as an option
 [MGInstagram postImage:image inView:self.view];
 
+//You can also post with a caption!
+[MGInstagram postImage:image withCaption:@"This is an #MGInstagram Caption Test" inView:self.view];
+
 //Checks if the UIImage is the correct size to be interpreted by the instagram app
 //Returns YES if correct size
 [MGInstagram isImageCorrectSize:image];

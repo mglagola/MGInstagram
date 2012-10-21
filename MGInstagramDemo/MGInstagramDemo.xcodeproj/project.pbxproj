@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D151834163454DB008739F5 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D151832163454DB008739F5 /* LICENSE.txt */; };
+		4D151835163454DB008739F5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4D151833163454DB008739F5 /* README.md */; };
 		4D9C1B04163341DB0085151C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9C1B03163341DB0085151C /* UIKit.framework */; };
 		4D9C1B06163341DB0085151C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9C1B05163341DB0085151C /* Foundation.framework */; };
 		4D9C1B08163341DB0085151C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9C1B07163341DB0085151C /* CoreGraphics.framework */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D151832163454DB008739F5 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE.txt; path = ../LICENSE.txt; sourceTree = "<group>"; };
+		4D151833163454DB008739F5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		4D9C1AFF163341DB0085151C /* MGInstagramDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MGInstagramDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D9C1B03163341DB0085151C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4D9C1B05163341DB0085151C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -67,6 +71,8 @@
 		4D9C1AF4163341DB0085151C = {
 			isa = PBXGroup;
 			children = (
+				4D151832163454DB008739F5 /* LICENSE.txt */,
+				4D151833163454DB008739F5 /* README.md */,
 				4D9C1B09163341DB0085151C /* MGInstagramDemo */,
 				4D9C1B02163341DB0085151C /* Frameworks */,
 				4D9C1B00163341DB0085151C /* Products */,
@@ -193,6 +199,8 @@
 				4D9C1B301633437F0085151C /* MGInstagramPhoto.png in Resources */,
 				4D9C1B3B16335B900085151C /* MGInstagramPhotoLarge.png in Resources */,
 				4D9C1B3C16335B900085151C /* MGInstagramPhotoSmall.png in Resources */,
+				4D151834163454DB008739F5 /* LICENSE.txt in Resources */,
+				4D151835163454DB008739F5 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
