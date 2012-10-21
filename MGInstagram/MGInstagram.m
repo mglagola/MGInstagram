@@ -50,10 +50,14 @@ NSString* const kInstagramPhotoFileName = @"tempinstgramphoto.igo";
 
 + (void) postImage:(UIImage*)image inView:(UIView*)view
 {
-    [[MGInstagram sharedInstance] postImage:image inView:view];
+    [[MGInstagram sharedInstance] postImage:image withCaption:nil inView:view];
+}
++ (void) postImage:(UIImage*)image withCaption:(NSString*)caption inView:(UIView*)view
+{
+    [[MGInstagram sharedInstance] postImage:image withCaption:caption inView:view];
 }
 
-- (void) postImage:(UIImage*)image inView:(UIView*)view
+- (void) postImage:(UIImage*)image withCaption:(NSString*)caption inView:(UIView*)view
 {
     if (!image)
         [NSException raise:NSInternalInconsistencyException format:@"Image cannot be nil!"];
@@ -66,6 +70,8 @@ NSString* const kInstagramPhotoFileName = @"tempinstgramphoto.igo";
     documentInteractionController = [UIDocumentInteractionController interactionControllerWithURL:fileURL];
     documentInteractionController.UTI = @"com.instagram.exclusivegram";
     documentInteractionController.delegate = self;
+    if (caption)
+        documentInteractionController.annotation = [NSDictionary dictionaryWithObject:caption forKey:@"InstagramCaption"];
     [documentInteractionController presentOpenInMenuFromRect:CGRectZero inView:view animated:YES];
 }
 

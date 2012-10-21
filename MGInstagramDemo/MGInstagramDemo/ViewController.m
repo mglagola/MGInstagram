@@ -10,11 +10,17 @@
 #import "MGInstagram.h"
 
 @interface ViewController ()
+{
+    IBOutlet UIScrollView *scrollView;
+}
+
 - (IBAction)post612InstagramPressed:(id)sender;
 - (IBAction)post1024InstagramPressed:(id)sender;
 
 - (IBAction)incorrectlyPost302InstagramPressed:(id)sender;
 - (IBAction)correctlyPost302InstagramPressed:(id)sender;
+
+- (IBAction)postWithCaptionPressed:(id)sender;
 @end
 
 @implementation ViewController
@@ -22,17 +28,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    scrollView.contentSize = scrollView.frame.size;
+}
+
+- (UIAlertView*) notInstalledAlert
+{
+    return [[UIAlertView alloc] initWithTitle:@"Instagram Not Installed!" message:@"Instagram must be installed on the device in order to post images" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil];
 }
 
 - (void) postInstagramImage:(UIImage*) image
 {
     if ([MGInstagram isAppInstalled])
         [MGInstagram postImage:image inView:self.view];
-    else {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Instagram Not Installed!" message:@"Instagram must be installed on the device in order to post images" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil];
-        [alert show];
-    }
+    else
+        [self.notInstalledAlert show];
 }
 
 - (IBAction)post612InstagramPressed:(id)sender
@@ -49,19 +58,28 @@
 
 - (IBAction)incorrectlyPost302InstagramPressed:(id)sender
 {
-    //BAD PRACTICE
+    //BAD PRACTICE (No size detection)
     UIImage *image = [UIImage imageNamed:@"MGInstagramPhotoSmall"];
     [self postInstagramImage:image];
 }
 - (IBAction)correctlyPost302InstagramPressed:(id)sender
 {
     UIImage *image = [UIImage imageNamed:@"MGInstagramPhotoSmall"];
-    if ([MGInstagram isImageCorrectSize:image]) //GOOD PRACTICE
+    if ([MGInstagram isImageCorrectSize:image]) //GOOD PRACTICE (Size detection)
         [self postInstagramImage:image];
     else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Image TOO SMALL" message:@"Images must be 612x612 or larger to be posted on instagram" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil];
         [alert show];
     }
+}
+
+- (IBAction)postWithCaptionPressed:(id)sender
+{
+    UIImage *image = [UIImage imageNamed:@"MGInstagramPhoto"];
+    if ([MGInstagram isAppInstalled])
+        [MGInstagram postImage:image withCaption:@"This is an #MGInstagram Test" inView:self.view];
+    else
+        [self.notInstalledAlert show];
 }
 
 @end
