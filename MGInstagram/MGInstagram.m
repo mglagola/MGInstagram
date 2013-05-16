@@ -34,7 +34,7 @@ NSString* const kInstagramPhotoFileName = @"tempinstgramphoto.igo";
 
 + (BOOL) isAppInstalled
 {
-    NSURL *appURL = [NSURL URLWithString:@"instagram://app"];
+    NSURL *appURL = [NSURL URLWithString:kInstagramAppURLString];
     return [[UIApplication sharedApplication] canOpenURL:appURL];
 }
 
