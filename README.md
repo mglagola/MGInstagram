@@ -43,3 +43,8 @@ else
    	NSLog(@"Error Instagram is either not installed or image is incorrect size");
 }
 ```
+
+## Apps Using MGInstagram
+- [Geo Jump](http://AppStore.com/GeoJump)
+
+If you're using this software in your app, contact me [@mglagola](https://twitter.com/mglagola) and I'll add you too the list.
