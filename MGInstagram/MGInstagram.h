@@ -18,6 +18,9 @@ extern NSString* const kInstagramPhotoFileName;
 
 //checks to see if image is large enough to be posted by instagram
 //returns NO if image dimensions are under 612x612
+//
+//Technically the instagram allows for photos to be published under the size of 612x612
+//BUT if you want nice quality pictures, I recommend checking the image size.
 + (BOOL) isImageCorrectSize:(UIImage*)image;
 
 //post image to instagram by passing in the target image and

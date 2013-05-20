@@ -25,6 +25,7 @@
 		4D9C1B301633437F0085151C /* MGInstagramPhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D9C1B2F1633437F0085151C /* MGInstagramPhoto.png */; };
 		4D9C1B3B16335B900085151C /* MGInstagramPhotoLarge.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D9C1B3916335B900085151C /* MGInstagramPhotoLarge.png */; };
 		4D9C1B3C16335B900085151C /* MGInstagramPhotoSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D9C1B3A16335B900085151C /* MGInstagramPhotoSmall.png */; };
+		4DD58B6B174AC58600082EE8 /* MGInstagramPhotoUnsupportedSize.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DD58B6A174AC58600082EE8 /* MGInstagramPhotoUnsupportedSize.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		4D9C1B2F1633437F0085151C /* MGInstagramPhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MGInstagramPhoto.png; sourceTree = "<group>"; };
 		4D9C1B3916335B900085151C /* MGInstagramPhotoLarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MGInstagramPhotoLarge.png; sourceTree = "<group>"; };
 		4D9C1B3A16335B900085151C /* MGInstagramPhotoSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MGInstagramPhotoSmall.png; sourceTree = "<group>"; };
+		4DD58B6A174AC58600082EE8 /* MGInstagramPhotoUnsupportedSize.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MGInstagramPhotoUnsupportedSize.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				4D9C1B2F1633437F0085151C /* MGInstagramPhoto.png */,
 				4D9C1B3916335B900085151C /* MGInstagramPhotoLarge.png */,
 				4D9C1B3A16335B900085151C /* MGInstagramPhotoSmall.png */,
+				4DD58B6A174AC58600082EE8 /* MGInstagramPhotoUnsupportedSize.png */,
 				4D9C1B0A163341DB0085151C /* Supporting Files */,
 			);
 			path = MGInstagramDemo;
@@ -201,6 +204,7 @@
 				4D9C1B3C16335B900085151C /* MGInstagramPhotoSmall.png in Resources */,
 				4D151834163454DB008739F5 /* LICENSE.txt in Resources */,
 				4D151835163454DB008739F5 /* README.md in Resources */,
+				4DD58B6B174AC58600082EE8 /* MGInstagramPhotoUnsupportedSize.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -32,28 +32,26 @@ NSString* const kInstagramPhotoFileName = @"tempinstgramphoto.igo";
     return sharedInstance;
 }
 
-+ (BOOL) isAppInstalled
-{
++ (BOOL) isAppInstalled {
     NSURL *appURL = [NSURL URLWithString:kInstagramAppURLString];
     return [[UIApplication sharedApplication] canOpenURL:appURL];
 }
 
-+ (BOOL) isImageCorrectSize:(UIImage*)image
-{
-    return (image.size.width >= 612 && image.size.height >= 612);
+//Technically the instagram allows for photos to be published under the size of 612x612
+//BUT if you want nice quality pictures, I recommend checking the image size.
++ (BOOL) isImageCorrectSize:(UIImage*)image {
+    CGImageRef cgImage = [image CGImage];
+    return (CGImageGetWidth(cgImage) >= 612 && CGImageGetHeight(cgImage) >= 612);
 }
 
-- (NSString*) photoFilePath
-{
+- (NSString*) photoFilePath {
     return [NSString stringWithFormat:@"%@/%@",[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"],kInstagramPhotoFileName];
 }
 
-+ (void) postImage:(UIImage*)image inView:(UIView*)view
-{
++ (void) postImage:(UIImage*)image inView:(UIView*)view {
     [[MGInstagram sharedInstance] postImage:image withCaption:nil inView:view];
 }
-+ (void) postImage:(UIImage*)image withCaption:(NSString*)caption inView:(UIView*)view
-{
++ (void) postImage:(UIImage*)image withCaption:(NSString*)caption inView:(UIView*)view {
     [[MGInstagram sharedInstance] postImage:image withCaption:caption inView:view];
 }
 
@@ -61,8 +59,6 @@ NSString* const kInstagramPhotoFileName = @"tempinstgramphoto.igo";
 {
     if (!image)
         [NSException raise:NSInternalInconsistencyException format:@"Image cannot be nil!"];
-    if (![MGInstagram isImageCorrectSize:image])
-        [NSException raise:NSInternalInconsistencyException format:@"INSTAGRAM IMAGE IS TOO SMALL! Instagram only takes images with dimensions 612x612 and larger. Use isImageCorrectSize: to make sure image is the correct size"];
     
     [UIImageJPEGRepresentation(image, 1.0) writeToFile:[self photoFilePath] atomically:YES];
     
