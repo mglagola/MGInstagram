@@ -8,10 +8,11 @@ MGInstagram is a iOS Utility for posting Images to Instagram from your app.
 
 ## Setup
 #### CocoaPods 
-Add `pod 'MGInstagram', 'X.X.X'` in your `Podfile`.  Fill in `X.X.X` with the latest pod spec version or `:head` if you live dangerously.
+- Add `pod 'MGInstagram', 'X.X.X'` in your `Podfile`.  Fill in `X.X.X` with the latest pod spec version or `:head` if you live dangerously.
+- import `#import <MGInstagram/MGInstagram.h>` Into your desired file. 
 #### Old Style (No, not the beer)
 - Drag and drop the MGInstagram Folder into your iOS project
-- import "MGInstagram.h" into the file you plan on using MGInstagram
+- import `#import "MGInstagram.h"` into the file you plan on using MGInstagram
 
 ## MGInstagram Available Methods
 
