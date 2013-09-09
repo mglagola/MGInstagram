@@ -7,7 +7,7 @@ MGInstagram is a iOS Utility for posting Images to Instagram from your app.
 - If the user selects Instagram, the user will be taken to the Instagram app with their Image.
 
 ## Setup
-CocoaPods is recommended but not necessary.
+CocoaPods is recommended.
 #### CocoaPods 
 - Add `pod 'MGInstagram', 'X.X.X'` in your `Podfile`.  Fill in `X.X.X` with the latest pod spec version or `:head` if you live dangerously.
 - import `#import <MGInstagram/MGInstagram.h>` Into your desired file. 
