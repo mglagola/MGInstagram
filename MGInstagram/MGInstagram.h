@@ -11,14 +11,13 @@
 @interface MGInstagram : NSObject <UIDocumentInteractionControllerDelegate>
 
 extern NSString* const kInstagramAppURLString;
-extern NSString* const kInstagramDefualtPhotoFileName;
+extern NSString* const kInstagramOnlyPhotoFileName;
 
 //DEFAULT file name is kInstagramDefualtPhotoFileName
 //DEFAULT file name is restricted to only the instagram app
 //Make sure your photoFileName has a valid photo extension.
-@property (nonatomic) NSString *photoFileName;
-
-+ (instancetype) sharedInstance;
++ (void) setPhotoFileName:(NSString*)fileName;
++ (NSString*) photoFileName;
 
 //checks to see if user has instagram installed on device
 + (BOOL) isAppInstalled;

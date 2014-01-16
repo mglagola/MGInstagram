@@ -12,12 +12,14 @@
     UIDocumentInteractionController *documentInteractionController;
 }
 
+@property (nonatomic) NSString *photoFileName;
+
 @end
 
 @implementation MGInstagram
 
 NSString* const kInstagramAppURLString = @"instagram://app";
-NSString* const kInstagramDefualtPhotoFileName = @"tempinstgramphoto.igo";
+NSString* const kInstagramOnlyPhotoFileName = @"tempinstgramphoto.igo";
 
 + (instancetype) sharedInstance
 {
@@ -31,9 +33,16 @@ NSString* const kInstagramDefualtPhotoFileName = @"tempinstgramphoto.igo";
 
 - (id) init {
     if (self = [super init]) {
-        self.photoFileName = kInstagramDefualtPhotoFileName;
+        self.photoFileName = kInstagramOnlyPhotoFileName;
     }
     return self;
+}
+
++ (void) setPhotoFileName:(NSString*)fileName {
+    [MGInstagram sharedInstance].photoFileName = fileName;
+}
++ (NSString*) photoFileName {
+    return [MGInstagram sharedInstance].photoFileName;
 }
 
 + (BOOL) isAppInstalled {

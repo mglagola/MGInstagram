@@ -29,8 +29,6 @@
 {
     [super viewDidLoad];
     scrollView.contentSize = scrollView.frame.size;
-    
-    [MGInstagram sharedInstance].photoFileName = @"temp.png";
 }
 
 - (UIAlertView*) notInstalledAlert
@@ -59,9 +57,9 @@
 
 - (IBAction)postToAllServicesPressed:(id)sender {
     UIImage *image = [UIImage imageNamed:@"MGInstagramPhotoLarge"];
-    [MGInstagram sharedInstance].photoFileName = @"tempphoto.png";
+    [MGInstagram setPhotoFileName:@"tempphoto.png"];
     [self postInstagramImage:image];
-    [MGInstagram sharedInstance].photoFileName = kInstagramDefualtPhotoFileName; //set back to default
+    [MGInstagram setPhotoFileName:kInstagramOnlyPhotoFileName];
 }
 
 - (IBAction)incorrectlyPost302InstagramPressed:(id)sender

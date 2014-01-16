@@ -19,6 +19,12 @@ CocoaPods is recommended.
 ## MGInstagram Available Methods
 
 ```objc  
+//Set the photo file name
+//The following will present various options including Instagram
+[MGInstagram setPhotoFileName:@"TempPhoto.png"];
+//The following will only show Instagram as an option
+[MGInstagram setPhotoFileName:kInstagramOnlyPhotoFileName];
+
 //Checks to see user has the instagram app installed
 //Returns YES if user does have the app
 [MGInstagram isAppInstalled];
