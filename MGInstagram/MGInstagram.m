@@ -8,21 +8,18 @@
 
 #import "MGInstagram.h"
 
-@interface MGInstagram ()
-{
+@interface MGInstagram () {
     UIDocumentInteractionController *documentInteractionController;
 }
-
-+ (MGInstagram *)sharedInstance;
 
 @end
 
 @implementation MGInstagram
 
 NSString* const kInstagramAppURLString = @"instagram://app";
-NSString* const kInstagramPhotoFileName = @"tempinstgramphoto.igo";
+NSString* const kInstagramDefualtPhotoFileName = @"tempinstgramphoto.igo";
 
-+ (MGInstagram *)sharedInstance
++ (instancetype) sharedInstance
 {
     static MGInstagram* sharedInstance = nil;
     static dispatch_once_t onceToken;
@@ -30,6 +27,13 @@ NSString* const kInstagramPhotoFileName = @"tempinstgramphoto.igo";
         sharedInstance = [[MGInstagram alloc] init];
     });
     return sharedInstance;
+}
+
+- (id) init {
+    if (self = [super init]) {
+        self.photoFileName = kInstagramDefualtPhotoFileName;
+    }
+    return self;
 }
 
 + (BOOL) isAppInstalled {
@@ -45,7 +49,7 @@ NSString* const kInstagramPhotoFileName = @"tempinstgramphoto.igo";
 }
 
 - (NSString*) photoFilePath {
-    return [NSString stringWithFormat:@"%@/%@",[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"],kInstagramPhotoFileName];
+    return [NSString stringWithFormat:@"%@/%@",[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"],self.photoFileName];
 }
 
 + (void) postImage:(UIImage*)image inView:(UIView*)view {
