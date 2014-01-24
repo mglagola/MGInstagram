@@ -62,18 +62,17 @@ NSString* const kInstagramOnlyPhotoFileName = @"tempinstgramphoto.igo";
 }
 
 + (void) postImage:(UIImage*)image inView:(UIView*)view {
-    [[MGInstagram sharedInstance] postImage:image withCaption:nil inView:view];
+    [self postImage:image withCaption:nil inView:view];
 }
 + (void) postImage:(UIImage*)image withCaption:(NSString*)caption inView:(UIView*)view {
-    [[MGInstagram sharedInstance] postImage:image withCaption:caption inView:view];
+    [self postImage:image withCaption:caption inView:view delegate:nil];
 }
 
-- (void) postImage:(UIImage*)image withCaption:(NSString*)caption inView:(UIView*)view
-{
-    [self postImage:image withCaption:caption inView:view delegate:delegate]
++ (void) postImage:(UIImage*)image withCaption:(NSString*)caption inView:(UIView*)view delegate:(id<UIDocumentInteractionControllerDelegate>)delegate {
+    [[MGInstagram sharedInstance] postImage:image withCaption:caption inView:view delegate:delegate];
 }
 
-+ (void) postImage:(UIImage*)image withCaption:(NSString*)caption inView:(UIView*)view delegate:(id<UIDocumentInteractionControllerDelegate>)delegate
+- (void) postImage:(UIImage*)image withCaption:(NSString*)caption inView:(UIView*)view delegate:(id<UIDocumentInteractionControllerDelegate>)delegate
 {
     if (!image)
         [NSException raise:NSInternalInconsistencyException format:@"Image cannot be nil!"];
