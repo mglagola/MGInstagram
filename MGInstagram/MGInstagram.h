@@ -34,5 +34,6 @@ extern NSString* const kInstagramOnlyPhotoFileName;
 + (void) postImage:(UIImage*)image inView:(UIView*)view;
 //Same as above method but with the option for a photo caption
 + (void) postImage:(UIImage*)image withCaption:(NSString*)caption inView:(UIView*)view;
++ (void) postImage:(UIImage*)image withCaption:(NSString*)caption inView:(UIView*)view delegate:(id<UIDocumentInteractionControllerDelegate>)delegate;
 
 @end
