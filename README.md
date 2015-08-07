@@ -8,22 +8,25 @@ MGInstagram is a iOS Utility for posting Images to Instagram from your app.
 
 ## Setup
 CocoaPods is recommended.
-#### CocoaPods 
+#### CocoaPods
 - Add `pod 'MGInstagram', 'X.X.X'` in your `Podfile`.  Fill in `X.X.X` with the latest pod spec version or `:head` if you live dangerously.
-- import `#import <MGInstagram/MGInstagram.h>` Into your desired file. 
+- import `#import <MGInstagram/MGInstagram.h>` Into your desired file.
 
-#### Old Style
+#### Manual
 - Drag and drop the MGInstagram Folder into your iOS project
 - import `#import "MGInstagram.h"` into the file you plan on using MGInstagram
 
 ## MGInstagram Available Methods
 
 ```objc  
+//Create an instance
+self.instagram = [[MGInstagram alloc] init];
+
 //Set the photo file name
 //The following will present various options including Instagram
-[MGInstagram setPhotoFileName:@"TempPhoto.png"];
+self.instagram.photoFileName = @"TempPhoto.png";
 //The following will only show Instagram as an option
-[MGInstagram setPhotoFileName:kInstagramOnlyPhotoFileName];
+self.instagram.photoFileName = kInstagramOnlyPhotoFileName;
 
 //Checks to see user has the instagram app installed
 //Returns YES if user does have the app
@@ -32,10 +35,10 @@ CocoaPods is recommended.
 //Post UIImage to Instagram
 //Presents an "openInMenu" model in the UIView specified  
 //User is only given Instagram as an option
-[MGInstagram postImage:image inView:self.view];
+[self.instagram postImage:image inView:self.view];
 
 //You can also post with a caption!
-[MGInstagram postImage:image withCaption:@"This is an #MGInstagram Caption Test" inView:self.view];
+[self.instagram postImage:image withCaption:@"This is an #MGInstagram Caption Test" inView:self.view];
 
 //Checks if the UIImage is at least 612x612 pixels.
 //Instagram upscales photos below this resolution, so it is
@@ -49,17 +52,10 @@ CocoaPods is recommended.
 
 ```objc  
 UIImage *image = [UIImage imageNamed:@"MyImageName.png"];
-if ([MGInstagram isAppInstalled] && [MGInstagram isImageCorrectSize:image]) 
-{
-    [MGInstagram postImage:image inView:self.view];
+if ([MGInstagram isAppInstalled] && [MGInstagram isImageCorrectSize:image]) {
+    [self.instagram postImage:image inView:self.view];
 }
-else 
-{
+else {
    	NSLog(@"Error Instagram is either not installed or image is incorrect size");
 }
 ```
-
-## Apps Using MGInstagram
-- [Geo Jump](http://AppStore.com/GeoJump)
-
-If you're using this software in your app, contact me [@mglagola](https://twitter.com/mglagola) and I'll add you too the list.
