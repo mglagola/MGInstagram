@@ -38,7 +38,7 @@ self.instagram.photoFileName = kInstagramOnlyPhotoFileName;
 [self.instagram postImage:image fromBarButtonItem:nil inView:self.view];
 
 //You can also post with a caption!
-[self.instagram postImage:image withCaption:@"This is an #MGInstagram Caption Test" inView:self.view];
+[self.instagram postImage:image withCaption:@"This is an #MGInstagram Caption Test" fromBarButtonItem:nil inView:self.view];
 
 //Checks if the UIImage is at least 612x612 pixels.
 //Instagram upscales photos below this resolution, so it is
@@ -53,7 +53,7 @@ self.instagram.photoFileName = kInstagramOnlyPhotoFileName;
 ```objc  
 UIImage *image = [UIImage imageNamed:@"MyImageName.png"];
 if ([MGInstagram isAppInstalled] && [MGInstagram isImageCorrectSize:image]) {
-    [self.instagram postImage:image fromBarButtonItem:nil  inView:self.view];
+    [self.instagram postImage:image fromBarButtonItem:nil inView:self.view];
 }
 else {
    	NSLog(@"Error Instagram is either not installed or image is incorrect size");
