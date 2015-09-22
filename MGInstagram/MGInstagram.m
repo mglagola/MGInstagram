@@ -45,7 +45,7 @@ NSString* const kInstagramOnlyPhotoFileName = @"tempinstgramphoto.igo";
 - (void)postImage:(UIImage*)image fromBarButtonItem:(UIBarButtonItem*)button inView:(UIView*)view {
     [self postImage:image withCaption:nil fromBarButtonItem:(UIBarButtonItem*)button inView:view];
 }
-- (void)postImage:(UIImage*)image withCaption:(NSString*)caption inView:(UIView*)view {
+- (void)postImage:(UIImage*)image withCaption:(NSString*)caption fromBarButtonItem:(UIBarButtonItem*)button inView:(UIView*)view {
     [self postImage:image withCaption:caption fromBarButtonItem:(UIBarButtonItem*)button inView:view delegate:nil];
 }
 
