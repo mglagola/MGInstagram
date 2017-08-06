@@ -29,9 +29,9 @@ extern NSString* const kInstagramOnlyPhotoFileName;
 
 ///post image to instagram by passing in the target image and
 ///the view in which the user will be presented with the instagram model
-- (void)postImage:(UIImage*)image inView:(UIView*)view;
+- (BOOL)postImage:(UIImage*)image inView:(UIView*)view;
 ///Same as above method but with the option for a photo caption
-- (void)postImage:(UIImage*)image withCaption:(NSString*)caption inView:(UIView*)view;
-- (void)postImage:(UIImage*)image withCaption:(NSString*)caption inView:(UIView*)view delegate:(id<UIDocumentInteractionControllerDelegate>)delegate;
+- (BOOL)postImage:(UIImage*)image withCaption:(NSString*)caption inView:(UIView*)view;
+- (BOOL)postImage:(UIImage*)image withCaption:(NSString*)caption inView:(UIView*)view delegate:(id<UIDocumentInteractionControllerDelegate>)delegate;
 
 @end

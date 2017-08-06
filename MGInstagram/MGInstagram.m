@@ -42,18 +42,19 @@ NSString* const kInstagramOnlyPhotoFileName = @"tempinstgramphoto.igo";
     return [NSString stringWithFormat:@"%@/%@",[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"],self.photoFileName];
 }
 
-- (void)postImage:(UIImage*)image inView:(UIView*)view {
-    [self postImage:image withCaption:nil inView:view];
-}
-- (void)postImage:(UIImage*)image withCaption:(NSString*)caption inView:(UIView*)view {
-    [self postImage:image withCaption:caption inView:view delegate:nil];
+- (BOOL)postImage:(UIImage*)image inView:(UIView*)view {
+    return [self postImage:image withCaption:nil inView:view];
 }
 
-- (void)postImage:(UIImage*)image withCaption:(NSString*)caption inView:(UIView*)view delegate:(id<UIDocumentInteractionControllerDelegate>)delegate {
+- (BOOL)postImage:(UIImage*)image withCaption:(NSString*)caption inView:(UIView*)view {
+    return [self postImage:image withCaption:caption inView:view delegate:nil];
+}
+
+- (BOOL)postImage:(UIImage*)image withCaption:(NSString*)caption inView:(UIView*)view delegate:(id<UIDocumentInteractionControllerDelegate>)delegate {
     NSParameterAssert(image);
     
     if (!image) {
-        return;
+        return NO;
     }
     
     [UIImageJPEGRepresentation(image, 1.0) writeToFile:[self photoFilePath] atomically:YES];
@@ -65,7 +66,7 @@ NSString* const kInstagramOnlyPhotoFileName = @"tempinstgramphoto.igo";
     if (caption) {
         self.documentInteractionController.annotation = @{@"InstagramCaption" : caption};
     }
-    [self.documentInteractionController presentOpenInMenuFromRect:CGRectZero inView:view animated:YES];
+    return [self.documentInteractionController presentOpenInMenuFromRect:CGRectZero inView:view animated:YES];
 }
 
 
