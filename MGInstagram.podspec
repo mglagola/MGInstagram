@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "MGInstagram"
-  s.version      = "1.1.0"
+  s.version      = "1.1.1"
   s.summary      = "A Simple and Easy to use iOS Instagram Utility for posting images to Instagram."
   s.homepage     = "https://github.com/mglagola/MGInstagram"
 
