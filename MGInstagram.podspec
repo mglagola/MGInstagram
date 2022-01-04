@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/mglagola/MGInstagram"
 
   s.license      = { :type => 'MIT', :file => 'LICENSE.txt' }
-  s.author       = { "Mark Glagola" => "mark.glagola@gmail.com" }
+  s.author       = { "Mark Glagola" => "" }
 
   s.source       = { :git => "https://github.com/mglagola/MGInstagram.git", :tag => s.version }
 
